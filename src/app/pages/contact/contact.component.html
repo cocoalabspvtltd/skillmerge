@@ -1,0 +1,130 @@
+
+
+@if(this.loader){
+  <div class="container1">
+    <div class="loader"></div>
+  </div>
+}
+@else {
+  <app-header></app-header>
+
+<section class="breadcum" style=" box-shadow: inset 0 0 0 2000px rgba(27, 27, 27, 0.432);">
+<div class="container">
+    <div class="breadcum-content">
+        <h2 class="title">Contact Us</h2>       
+    </div>
+</div>
+</section>
+<section class="@ py-120 contact-bg-color">
+  <div class="container-xxl">
+    <div class="contact-us-content">
+      <div class="contact-us-img">
+        <img src="assets/img/contact-us/contact-us.jpg" alt="contact-img" />
+      </div>
+      <div class="contact-us-right-content">
+        <div class="section-title">
+          <div class="section-title-inner">
+            <h4 class="sub-title">Contact Us</h4>
+            <h2 class="big-title s-color-white">Get in touch with us</h2>
+          </div>
+        </div>
+        <form class="get-free-form-content" [formGroup]="contactForm" (ngSubmit)="contact()" >
+         
+          <div class="group-form-box">
+            <div class="form-box">
+              <input type="text" placeholder="Your Name" formControlName="name"><br>
+             
+            </div><br>
+            @if(this.contactForm.get('name')?.hasError('required')&&this.contactForm.get('name')?.touched){
+              <div class="form-error" > Name is Required</div>
+                                           
+            } @else if(this.contactForm.get('name')?.hasError('pattern')){
+              <div class="form-error" >Invalid  Name</div>
+            } 
+            <div class="form-box">
+              <input type="email" placeholder="Email Address" formControlName="email"/>
+            </div>
+          </div>
+          <div class="form-box">
+            <input type="text" placeholder="Mobile number"  name="phone" formControlName="phone">
+            @if(this.contactForm.get('phone')?.hasError('required')&&this.contactForm.get('phone')?.touched){
+                <div class="form-error" >Mobile Number is Required</div>
+                                             
+              } @else if(this.contactForm.get('phone')?.hasError('pattern')){
+                <div class="form-error" >Invalid Mobile Number</div>
+              }
+          </div>
+          <div class="form-box-last">
+            <textarea cols="30" rows="10" placeholder="Type Your Message" formControlName="message" ></textarea>
+          </div>
+          <div class="check-box">
+            <div class="all-btn">
+              <button class="btn-p v1 rounded btn-blue" type="submit">
+                Send Here
+              </button>
+            </div>
+            @if (this.msg) {
+              <div  class="alert alert-warning" role="alert">
+                 <p >{{this.msg}}</p>
+               </div>
+             }
+             @if (this.errorMsg){
+               <div class="alert alert-warning" role="alert">
+                 <p >{{this.errorMsg}}</p>
+               </div>
+             }
+          </div>
+        </form>
+        <div class="bg-map-contact-us">
+          <img src="assets/img/contact-us/bg-map-contact-us.png" alt="bg-map-contact-us">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-us-contact-info">
+  <div class="container">
+    <div class="info-list">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="info-list-content">
+            <div class="info-icon">
+              <i class="my-icon icon-call-us-2"></i>
+            </div>
+            <div class="info-right-data">
+              <h5 class="mini-title">Call Us 24/7</h5>
+              <h3 class="big-title">+91 9946 746 422</h3><br><br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="info-list-content">
+            <div class="info-icon">
+              <i class="my-icon icon-massage-3"></i>
+            </div>
+            <div class="info-right-data">
+              <h5 class="mini-title">MAke A Quote</h5>
+              <h3 class="big-title">skillmergehub&#64;gmail.com</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="info-list-content">
+            <div class="info-icon">
+              <i class="my-icon icon-service-station"></i>
+            </div>
+            <div class="info-right-data">
+              <h5 class="mini-title">EXPERT'S SKILL MERGE HUB</h5>
+              <h3 class="big-title">
+               
+                Edappally, Ernakulam</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<iframe src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8528261865736!2d76.30761597569774!3d10.029001272533543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d2e8045df59%3A0x7d42aca33655f599!2sExperts%20Skillmerge%20hub%20Pvt%20ltd!5e0!3m2!1sen!2sin!4v1721711778687!5m2!1sen!2sin" style="width: 100%; height:450px;border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<app-footer></app-footer>
+}

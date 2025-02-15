@@ -1,0 +1,29 @@
+
+<app-header></app-header>
+<section class="breadcum">
+
+        <div class="breadcum-content">
+            <h2 class="title">Blog</h2>           
+        </div>
+   
+    </section>
+    <div class="container">
+        <div class="blog-header">
+          <h1 id="blog-title">{{data1.title}}</h1>       
+        </div>
+        <div class="blog-content" id="blog-content">
+          <div class="para1" [innerHTML]="data1.description"></div>
+        </div>
+        <a href="#" class="back-btn" onclick="history.back()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20"
+            width="20"
+            viewBox="0 0 24 24"
+          >
+            <path d="M15 19l-7-7 7-7v14z" />
+          </svg>
+          Back
+        </a>
+    </div>  
+    <app-footer></app-footer>

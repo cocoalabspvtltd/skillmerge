@@ -1,0 +1,298 @@
+
+@if(this.loader){
+    <div class="container1">
+      <div class="loader"></div>
+    </div>
+  }
+  @else {
+    <app-header></app-header>
+
+<section class="breadcum" style=" box-shadow: inset 0 0 0 2000px rgba(27, 27, 27, 0.432);">
+    <div class="container">
+        <div class="breadcum-content">
+            <h2 class="title">About Us</h2>           
+        </div>
+    </div>
+    </section>
+
+    <section class="my-120 @"> 
+        <div class="container-xl">
+            <div class="about-us-content v3">
+                <div class="section-title">
+                    <div class="section-title-inner">
+                        <!-- <h4  class="sub-title" data-aos="fade-down" data-aos-duration="1000" style="text-align: center;">Our about us</h4> -->
+                        <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="1000">Welcome to Experts Skill Merge </h2>
+                        <p class="para1" data-aos="fade-up" data-aos-duration="1000" [innerHTML]="aboutData.description"></p>
+                    </div>
+                </div>
+                <!-- <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        
+                      
+                       
+                        <!-- <p class="para" data-aos="fade-right" data-aos-duration="1000">Discover innovative tools, digital classrooms, and cutting-edge approaches to reshape the way we learn and teach. Join us in shaping the future of education.</p> ->
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1500">
+                        <div class="about-us-left-content">
+                            <img [src]="aboutImage" alt="courses-img" class="responsive"/>
+                        </div>
+                    </div>
+                </div> -->
+               
+            </div>
+     
+           <section class="about-us v1">
+            <div class="container-lg">        
+              <div class="courses-cards v1">       
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                    <div class="row">                
+                        
+                        <div class="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                            <div class="courses-cards-content" data-name="marketing">
+                              <div class="courses-content">                      
+                                <h4 style="text-align: center;">
+                                    <a  >Vision                                </a>
+                                  </h4>                            
+                                  <div style="padding:10px">                             
+                                    <p class="para" [innerHTML]="aboutData.vision">.</p>
+                                  </div>
+                              </div>                       
+                            </div>
+                          </div> 
+                          <div class="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                            <div class="courses-cards-content" data-name="marketing">
+                              <div class="courses-content">                      
+                                <h4 style="text-align: center;">
+                                  <a  >Mission                                </a>
+                                </h4>      
+                                  <div style="padding:10px">                             
+                                    <p class="para" [innerHTML]="aboutData.mission"></p>  
+                                  </div>
+                              </div>                       
+                            </div>
+                          </div> 
+                          <div class="col-lg-12 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                            <div class="courses-cards-content" data-name="marketing">
+                              <div class="courses-content">                      
+                                <h4 style="text-align: center;">
+                                    <a  >Core Values                               </a>
+                                  </h4>                            
+                                  <div style="padding:10px">                             
+                                    <p class="para"  [innerHTML]="aboutData.core_values"></p>
+                                  </div>
+                              </div>                       
+                            </div>
+                          </div>               
+                    </div>
+                   
+                  </div>         
+                </div>
+              </div>
+            </div>
+          
+        </section>
+        </div>
+        
+    </section>
+    <!-- <section class="skill-section @ py-100">
+        <div class="container">
+            <ul class="skill-items">
+                <li class="skill-item">
+                    
+                </li>
+                <li class="skill-item">
+                    <div class="item-icon">
+                        <i class="my-icon icon-media-activities"></i>
+                    </div>
+                    <div class="item-content">
+                        <h5 class="title"><span class="counter">325</span></h5>
+                        <p class="para">MEDIA ACTIVITIES</p>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="item-icon">
+                        <i class="my-icon icon-skill-expert"></i>
+                    </div>
+                    <div class="item-content">
+                        <h5 class="title"><span class="counter">598</span></h5>
+                        <p class="para">SKILLED EXPERTS</p>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="item-icon">
+                        <i class="my-icon icon-happy-students"></i>
+                    </div>
+                    <div class="item-content">
+                        <h5 class="title"><span class="counter">36</span>K</h5>
+                        <p class="para">HAPPY Students</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="skill-left-img">
+            <img src="assets/img/skill-section/skill-left-img.png" alt="skill-left-img">
+        </div>
+        <div class="skill-right-img">
+            <img src="assets/img/skill-section/skill-right-img.png" alt="skill-right-img">
+        </div>
+    </section> -->
+      
+
+    <section class="about-us v1 my-120 @">
+        <div class="container-lg">        
+          <div class="courses-cards v1">     
+          
+            <div class="section-title center">
+                <div class="section-title-inner center">
+                    <h4 class="sub-title">our best team</h4>
+                    <h2 class="big-title s-color-black"> Our Team</h2>
+                    <p class="para1" [innerHTML]="teamData.description"></p>
+                </div>
+            </div>
+            <div class="v1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <h4 style ="font-weight: 500;text-align: center;">Achievements</h4>
+                <br>
+                <div class="row">
+                   
+                   @for (item of achievements; track $index) {                
+                      <div class="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                                        <div class="courses-cards-content" data-name="marketing">
+                                          <div class="courses-content1">                      
+                                            <h6 style="text-align: center;">
+                                                <a  >{{item.title}}                                </a>
+                                              </h6>                            
+                                              <div style="padding:10px">                             
+                                                <p class="para"  [innerHTML]="item.description"></p>
+                                              </div>
+                                          </div>                       
+                                        </div>
+                                      </div> 
+                                   
+                       
+                   }
+                    
+                </div>
+            </div>
+           <div style="margin-top: 50px;"></div>
+            <div  data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <h4 style ="font-weight: 500;text-align: center;" >Parent Companies</h4>
+                <div class="row align-items-center" style="padding:20px">
+                   
+                   @for (item of parent_companies; track $index) {
+                    <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">                       
+                        <div class="company">                             
+                              <img [src]="baseurl+'/'+item.icon_image" alt="{{ item.title }}"  style="width:50%;height:50%;margin:auto;display:block"/>
+                               <!-- <br>
+                              <p>{{ item.title }}</p> -->
+                            </div>
+                        </div>
+                   }                          
+             
+            </div>
+            
+        </div>
+        </div>
+        </div>
+       
+    </section>
+    <section style="background-color: aliceblue; padding: 20px;;">
+      <div class="container">
+        <div class="section-title center">
+          <div class="section-title-inner center">
+            <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1000">Testimonial</h4>
+            <h2 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000">Stories of Success</h2>
+          </div>
+        </div>
+        <div class="courses-cards">
+          <owl-carousel-o [options]="customOptions">
+            @for (item of testData;; track $index) {
+            <ng-template carouselSlide style="padding:10px;">
+              <div class="courses-card ">
+                <div class="row" id="card1">
+                  <div class="col-lg-4">
+                    <div class="user-img">
+                      <img [src]="baseurl+'/'+item. client_image" alt="{{ item.title }}" id="test" />
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="courses-card-content">
+                      <h4 class="title" style="text-align: center;font-size: 20px;color:#fff !important;">{{item.
+                        client_data}}</h4>
+                      <p style="color:#fff !important;;font-size: 14px;text-align: justify;" [innerHTML]="item.description"></p>
+    
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </ng-template>
+            }
+          </owl-carousel-o>
+        </div>
+    
+      </div>
+    </section>
+    <section class="why-choose-us v1 my-120 @">
+      <div class="container">
+        <div class="choose-us-content">
+          <div class="choose-us-right-content">
+            <div class="section-title">
+              <div class="section-title-inner">
+                <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">FAQ</h4>
+                <h2 class="big-title" data-aos="fade-up" data-aos-duration="1500">Frequently Ask Question?</h2>
+                <!-- <p class="title-para sp-color-black" data-aos="fade-up" data-aos-duration="1500">Teachers play a
+                    critical role in education by instructing and guiding for students,
+                    facilitating learning, providing support and encouragement, and fostering a positive</p> -->
+              </div>
+            </div>
+    
+            <div class="row align-items-center">
+              @for (item of faqData; track $index) {
+              <div class="col-lg-6">
+                <div class="case-studies-left-content">
+                  <ul class="why-choose-us-accordion" id="accordionExample">
+    
+                    <li class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          [attr.data-bs-target]="'#collapse' + $index" aria-expanded="false"
+                          [attr.aria-controls]="'collapse' + $index">
+                          <span class="button-number">{{ $index + 1 }}</span>{{ item.question }}
+                        </button>
+                      </h2>
+    
+                      <div [id]="'collapse' + $index" class="accordion-collapse collapse"
+                        [attr.data-bs-parent]="'#accordionExample'">
+                        <div class="accordion-body" [innerHTML]="item.answer">
+                        </div>
+                      </div>
+                    </li>
+    
+                  </ul>
+                </div>
+              </div>
+              }
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      <!-- <div class="choose-us-slide">
+          <h2 class="choose-us-slide-text v1 text">ONLINE CLASS </h2>
+          <h2 class="choose-us-slide-text text">Courses CLASS</h2>
+          <h2 class="choose-us-slide-text v2 text">ONLINE CLASS </h2>
+          <h2 class="choose-us-slide-text v1 text">ONLINE CLASS </h2>
+          <h2 class="choose-us-slide-text text">Courses CLASS</h2>
+          <h2 class="choose-us-slide-text v2 text">ONLINE CLASS </h2>
+          <h2 class="choose-us-slide-text v1 text">ONLINE CLASS </h2>
+          <h2 class="choose-us-slide-text text">Courses CLASS</h2>
+          <h2 class="choose-us-slide-text v2 text">ONLINE CLASS </h2>
+        </div> -->
+      <div class="why-choose-us-background-img">
+        <img src="assets/img/why-choose-us/background-img.png" alt="background-img">
+      </div>
+    </section>
+    <br><br>
+    <app-footer></app-footer>
+}

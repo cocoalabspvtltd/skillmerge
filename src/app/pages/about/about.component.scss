@@ -1,0 +1,102 @@
+.founder-ceo {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width:100%;
+    border:1px dashed red;
+    color:#000;
+     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    // align-items: center;
+    // -ms-flex-wrap: wrap;
+    // flex-wrap: wrap;
+    // background: #f2f7f9;
+    // padding: 20px;
+    // border-radius: 20px;
+    // position: relative;
+    // z-index: 1;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+#card1{
+  background-color: #072555;
+  padding:10px;
+  margin: 10px;
+  border-radius: 15px;;
+}
+
+.founder-ceo2 {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width:100%;
+    border:1px dashed rgb(25, 40, 82);
+    color:#000;
+     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    // align-items: center;
+    // -ms-flex-wrap: wrap;
+    // flex-wrap: wrap;
+    // background: #f2f7f9;
+     padding: 20px;
+    border-radius: 20px;
+    // position: relative;
+    // z-index: 1;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+ul li 
+{
+    color: var(--color-paragraph);
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+h2{
+    text-align: center;
+}
+.card{
+    padding: 10px;
+}
+.company img {
+    width: 250px;
+    height: 250px;
+    margin-right: 10px;
+  }
+  .company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+  img{
+    width:100px;
+  }
+  .para{
+    text-align: justify;
+    font-size: 15px;
+    padding:5px;
+  }
+  .para1{
+    text-align:center;
+    font-size: 15px;
+  }
+  .courses-content1{
+    min-height: 250px;
+    padding:10px;
+  }
+  @media (max-width: 768px) {
+    .para{
+      
+      font-size: 15px;
+      padding:2px;
+    }
+  }

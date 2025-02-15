@@ -1,0 +1,98 @@
+
+
+<app-header></app-header>
+<section class="register-now">
+    <div class="container">
+        <div class="section-title center">
+            <div class="section-title-inner center">
+                <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">Apply Now</h4>
+                <h2 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1500" id="h2">Start Your Journey Today – Apply Now</h2>
+            </div>
+        </div>
+       
+        <div class="get-free-now v1">
+  <div class="get-free-content">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="get-free-left-content" data-aos="zoom-in-up" data-aos-duration="2500">
+          <img src="assets/img/more-about-us-2.jpg" alt="student-img"  style="margin-top:150px;"/>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="get-free-right-content">
+          <div class="section-title">
+            <div class="section-title-inner">
+              <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">Get Free Now</h4>
+              <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="1500"> Apply Now </h2>
+              <p class="title-para sp-color-black" data-aos="fade-up" data-aos-duration="1500">
+                Take the next step in your journey with us. Whether you're seeking a new career opportunity, an educational program, or a chance to join our community, this is your moment. Our application process is straightforward and designed to help you showcase your unique talents and aspirations. Don't wait – apply now and unlock your potential!
+              </p>
+            </div>
+          </div>
+          <form class="get-free-form-content" [formGroup]="contactForm" (ngSubmit)="contact()" >
+         
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="form-box">
+                  <input type="text" placeholder="Your Name" formControlName="name"><br>
+                 
+                </div>
+                @if(this.contactForm.get('name')?.hasError('required')&&this.contactForm.get('name')?.touched){
+                  <div class="form-error" > Name is Required</div>
+                                               
+                } @else if(this.contactForm.get('name')?.hasError('pattern')){
+                  <div class="form-error" >Invalid  Name</div>
+                } 
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="form-box">
+                  <input type="email" placeholder="Email Address" formControlName="email"/>
+                </div>
+              </div>
+              
+             </div>
+                
+               <div class="row" style="padding:10px;">
+                <div class="form-box">
+                  <input type="text" placeholder="Mobile number"  name="phone" formControlName="phone">
+                </div>
+                  @if(this.contactForm.get('phone')?.hasError('required')&&this.contactForm.get('phone')?.touched){
+                      <div class="form-error" >Mobile Number is Required</div>
+                                                   
+                    } @else if(this.contactForm.get('phone')?.hasError('pattern')){
+                      <div class="form-error" >Invalid Mobile Number</div>
+                    }
+               
+               </div>  
+            <!-- <div class="form-box-last">
+              <textarea cols="30" rows="10" placeholder="Type Your Message" formControlName="message" ></textarea>
+            </div> -->
+            <div class="check-box">
+              <div class="all-btn">
+                <button class="btn-p v1 rounded btn-blue" type="submit">
+                  Send 
+                </button>
+              </div>
+              @if (this.msg) {
+                <div  class="alert alert-warning" role="alert">
+                   <p >{{this.msg}}</p>
+                 </div>
+               }
+               @if (this.errorMsg){
+                 <div class="alert alert-warning" role="alert">
+                   <p >{{this.errorMsg}}</p>
+                 </div>
+               }
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    </div>
+    <div class="background-big-img">
+        <img src="assets/img/register-now/background-img.png" alt="background-img">
+    </div>
+</section>
+<app-footer></app-footer>

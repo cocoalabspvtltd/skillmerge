@@ -1,0 +1,1415 @@
+
+@if(loader==1){
+  <div class="container1">trytryrty
+    <!-- <div class="loader"></div> -->
+  </div>
+}
+@else {
+  <app-header></app-header>
+  <section class="banner v2">
+    <div class="banner-content v2">
+        <div class="swiper swiper-banner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+            <owl-carousel-o [options]="customOptions1">
+              @for (item of sliderData; track $index) {
+              <ng-template carouselSlide style="padding:10px;" >                                
+                  <div class="banner-img" [style.background-image]="'url(' + baseurl1 +'/'+ item.image + ')'" >
+                    <div id="overlay"> 
+                      <div class="banner-data align-items-center">
+                          <div class="container">
+                              <div class="section-title">
+                                  <div class="section-title-inner w-v3">                                      
+                                      <h2 class="big-title s-color-white animate__animated animate__fadeInUp" style="animation-duration: 1s;" id="h2">{{item.title}}</h2>
+                                      <!-- <p class="title-para s-color-white animate__animated animate__fadeInUp" style="animation-duration: 2s;">{{item.description}}</p> -->
+                                  </div>
+                              </div>
+                              <div class="row"  >
+                                <div class="col-lg-4">
+                                  <div id="check">
+                                    <a href="#" class="inline-button1"> 
+                                      <button id="btn12" style="background-color:#fff !important;"><a routerLink="/contact" >Know More</a></button></a>
+                                      <!-- <a id="a1"  href="{{item.url}}" target="_blank" class="btn-p v1 btn-blue2 rounded icon-v1"><i class="fa fa-download" aria-hidden="true" style="color:#182266"></i>Brochure</a> -->
+                                      <button id="btn12" style="background-color:#fff !important;"><a href="{{item.url}}" target="_blank"  ><i class="fa fa-download" aria-hidden="true" style="color:#182266"></i>Brochure</a></button>
+
+                                  </div>
+                                </div>
+                                <div class="col-lg-8"></div>
+                              </div>
+                             
+                              <!-- <div class="play-data v1 mb-100 animate__animated animate__fadeInUp" style="animation-duration: 2s;">
+                                <div>
+                                    <button id="btn12"><a routerLink="/contact" class="btn-p v1 btn-blue2 rounded icon-v1">Know More</a></button>
+                                </div>
+                          
+                           
+
+                             </div>                                -->
+                          </div>
+                      </div>
+                    </div> 
+                  </div>
+              
+            </ng-template> 
+              } 
+            </owl-carousel-o>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
+  <!-- <section class="banner v2">
+    <div class="banner-content v2">
+        <div class="swiper swiper-banner">
+            <div class="swiper-wrapper">
+              @for (item of sliderData; track $index) {
+                <div class="swiper-slide">
+                               
+                    <div class="banner-img" [style.background-image]="'url(' + baseurl11 +'/'+ item.image + ')'" >
+                      <div id="overlay"> 
+                        <div class="banner-data align-items-center">
+                            <div class="container">
+                                <div class="section-title">
+                                    <div class="section-title-inner w-v3">                                      
+                                        <h2 class="big-title s-color-white animate__animated animate__fadeInUp" style="animation-duration: 1s;" id="h2">{{item.title}}</h2>
+                                        <!-- <p class="title-para s-color-white animate__animated animate__fadeInUp" style="animation-duration: 2s;">{{item.description}}</p> --
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-4">
+                                    <div class="button-container">
+                                      <a href="#" class="inline-button1"> 
+                                        <button id="btn12"><a routerLink="/contact" class="btn-p v1 btn-blue2 rounded icon-v1">Know More</a></button></a>
+                                        <a style="  padding: 10px;border-radius: 5px;background-color:rgba(250, 247, 247, 0.932);" href="{{item.url}}" target="_blank" class="btn-p v1 btn-blue2 rounded icon-v1"><i class="fa fa-download" aria-hidden="true" style="color:#182266"></i> Brouchure</a>
+                                
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-8">2</div>
+                                </div>
+                               
+                                <!-- <div class="play-data v1 mb-100 animate__animated animate__fadeInUp" style="animation-duration: 2s;">
+                                  <div>
+                                      <button id="btn12"><a routerLink="/contact" class="btn-p v1 btn-blue2 rounded icon-v1">Know More</a></button>
+                                  </div>
+                            
+                             
+
+                               </div>                               
+                            </div>
+                        </div>
+                      </div> 
+                    </div>
+                </div>
+              }
+               <!-- <div class="swiper-slide">
+                    <div class="banner-img"
+                        style="background-image: url('assets/img/banner/hm-bnr-2.jpg');">                        
+                        <div class="banner-data">
+                            <div class="container">
+                                <div class="section-title">
+                                    <div class="section-title-inner w-v3">                                      
+                                        <h2 class="big-title s-color-white animate__animated animate__fadeInUp" style="animation-duration: 2s;" id="h2">Featured Courses Our Edupls Theme</h2>
+                                        <p class="title-para s-color-white animate__animated animate__fadeInUp" style="animation-duration: 2s;">We believe that with the right guidance, support, and mindset, you can accomplish anything you set your</p>
+                                    </div>
+                                </div>
+                                <div style="text-align:center; padding-left: 10px;">
+                                <div class="play-data v1 mb-100 animate__animated animate__fadeInUp" style="animation-duration: 2s;">
+                                    <div>
+                                        <button id="btn12"><a routerLink="/contact" class="btn-p v1 btn-blue2 rounded icon-v1">Know More</a></button>
+                                    </div>
+                                    <img src="assets/img/brouchure.png" alt="wave-img" id="img12">
+                                 </div>                              
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  --
+                
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> --
+        </div>
+    </div>
+  </section>  -->
+  <!-- <section class="banner v1" >
+    <div class="container" >
+        <div class="banner-content v1" style="padding-right:10px">
+            <div class="row">
+                <div class="col-xl-7 col-lg-12">
+                    <div class="section-title">
+                        <div class="section-title-inner">
+                            <!-- <h4 class="sub-titlev2" data-aos="fade-down" data-aos-duration="1000"><span></span></h4> --
+                            <h2 id ="h2" class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000">{{sliderData.title}}</h2>
+                            <!-- <p class="title-para sp-color-white" data-aos="fade-up" data-aos-duration="1000">We believe
+                                that with the right guidance, support, and mindset, you can accomplish anything you set
+                                your</p> --
+                        </div>
+                    </div>
+                    <div class="play-data v1" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="all-btn">
+                            <a routerLink="/contact" class="btn-p v1 btn-blue2 rounded icon-v1">Make Appointment</a>
+                        </div>
+                        @if(sliderData.url!='nill'){
+                          <a href="{{sliderData.url}}" class="youtube">
+                            <div class="play-content">
+                                <div class="play-icon v1">
+                                    <i class="my-icon icon-play"></i>
+                                </div>
+                                <h4 class="title">Play Now</h4>
+                            </div>
+                        </a>
+                        }
+                        
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="banner-right-content">
+                        <div class="banner-img">
+                            <img src="assets/img/banner/banner-img.png" alt="banner-img">
+                            <!-- <img src="{{sliderImage}}" alt="banner-img"> --
+                        </div>
+                        <div class="banner-img-bg-circle" id="banner-img-bg-circle">
+                            <img src="assets/img/banner/banner-img-bg-circle.png" alt="banner-img-bg-circle">
+                        </div>
+                        <div class="banner-congratulations">
+                            <div class="congratulations-icon">
+                                <img src="assets/img/banner/congratulations.svg" alt="congratulations-icon">
+                            </div>
+                            <div class="congratulations-content">
+                                <h4 class="title text">Congratulations</h4>
+                                <p class="para text">You have successfully completed this Course</p>
+                            </div>
+                        </div>
+                        <div class="interactive-courses">
+                            <div class="courses-icon">
+                                <img src="assets/img/banner/banner-interactive-courses.svg"
+                                    alt="banner-interactive-courses-icon">
+                            </div>
+                            <div class="courses-content">
+                                <h4 class="title"><span class="counter">10,000</span>+</h4>
+                                <p class="para text">Intership programms</p>
+                            </div>
+                        </div>
+                        <div class="students" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="students-icon">
+                                <h5 class="text title"><span class="counter">20</span>k Participants</h5>
+                                <img src="assets/img/banner/students.svg" alt="banner-interactive-courses-icon">
+                            </div>
+                            <!-- <ul class="students-imgages">
+                                <li>
+                                    <a href="team-details.html"><img src="assets/img/banner/student-img-1.png"
+                                            alt="student-img"></a>
+                                </li>
+                                <li>
+                                    <a href="team-details.html"><img src="assets/img/banner/student-img-2.png"
+                                            alt="student-img"></a>
+                                </li>
+                                <li>
+                                    <a href="team-details.html"><img src="assets/img/banner/student-img-3.png"
+                                            alt="student-img"></a>
+                                </li>
+                                <li>
+                                    <a href="team-details.html"><img src="assets/img/banner/student-img-4.png"
+                                            alt="student-img"></a>
+                                </li>
+                            </ul> --
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="banner-bg-left">
+        <img src="assets/img/banner/banner-bg-left.png" alt="banner-bg-left">
+    </div>
+    <div class="banner-bg-right">
+        <img src="assets/img/banner/banner-bg-right.png" alt="banner-bg-right">
+    </div> --
+    <div class="messenger-icon">
+        <i class="my-icon icon-messenger-icon"></i>
+    </div>
+  </section> -->
+  <section class="about-us v1 my-120">
+    <div class="container-lg">
+      <div class="section-title center">
+        <div class="section-title-inner center">
+          <!-- Check if programData and program_details are defined -->
+          <h4 *ngIf="programData?.program_details?.banner_subtitle" class="sub-title" data-aos="fade-down" data-aos-duration="1000">
+            {{programData.program_details.banner_subtitle}}
+          </h4>
+          <h2 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000">
+            {{programData?.program_details?.banner_title}}
+          </h2>
+        </div>
+      </div>
+      <div class="courses-cards v1">       
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+            <div class="row">
+              <!-- Use *ngFor to loop through programData items safely -->
+              <div *ngFor="let item of programData; index as i" class="col-xxl-4 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="pricing-card" style="background-image: url('assets/img/ozone1.png'); background-repeat: no-repeat; background-size: contain">
+                  <div class="pricing-top-content">
+                    <h3 class="title" style="padding-top:50px !important">{{item.course_title}}</h3>
+                  </div>
+                  
+                  <div class="wave-img">
+                    <img src="assets/img/pricing-plan/wave-img.png" alt="wave-img">
+                  </div>
+                  
+                  <div class="pricing-bottom-content">
+                    <ul class="check-box v3">
+                      <li class="box-item">
+                        <div class="item-icon">
+                          <i class="my-icon icon-checkmark-2"></i>
+                        </div>
+                        <p class="item-para">Internship Duration: {{item.course_duration}}</p>
+                      </li>
+                      <li class="box-item">
+                        <div class="item-icon">
+                          <i class="my-icon icon-checkmark-2"></i>
+                        </div>
+                        <p class="item-para">Core Competencies and skill Acquisition:</p>
+                      </li>
+                    </ul>
+                    <div class="all-btn">
+                      <a routerLink="/apply" class="btn-p v1 btn-blue rounded icon-v1">Apply Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+  
+  <section class="about-us v1 my-120 @">
+    <div class="container-lg">
+      <div class="section-title center">
+        <div class="section-title-inner center">
+          <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1000">Job</h4>
+          <h2 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000" >Latest Job on Expert's Skill Merge Hub</h2>
+        </div>
+      </div>
+      <div class="courses-cards v1">       
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+            <div class="row">
+              @for (item of jobData; track $index) {
+                <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                  <div class="courses-cards-content" data-name="marketing">
+                    <div class="courses-content"> 
+                     <img src="assets/img/job.png" alt="courses-img" style="width: 70px;height: 70px;margin:auto;display: block;border: 1px solid #999696;border-radius: 50px;padding:10px"/>
+                 
+                      <h4 class="courses-title">
+                        <a >{{item.position}}
+                        </a>
+                      </h4>
+                        
+
+                      <div class="time-leson">
+                        <div class="time">
+                        <ul>
+                          <li><i class="fa-regular fa-building" id="company1"></i><span>{{item.company}}</span> </li>
+                          <li><i class="fa fa-map-marker" aria-hidden="true" id="company1"></i><span> {{item.location}}</span> </li> 
+                          <li><i class="fa fa-briefcase" id="company1"></i><span>{{item.position}} </span>    </li>
+                         
+                        </ul>
+                        </div>
+                      </div>
+                        <div style="padding:10px">
+                          <p style="font-size: 14px;">Details :</p>
+                         <p style="font-size: 14px;;padding-left:15px" [innerHTML]="item.details"></p>
+                        </div>
+                    </div>
+                    <div class="admin">
+                      <div class="admin-data">
+                        <div class="admin-img">
+                          <!-- <img src="assets/img/courses/admin-img-1.png" alt="admin-img" /> -->
+                          <a  class="btn-p v2 btn-blue rounded">{{item.job_designation}}</a>
+  
+                        </div>
+                        <h5 class="admin-name"></h5>
+                      </div>
+                      <div class="all-btn v2" data-aos="fade-up" data-aos-duration="1000">
+                        <a routerLink="/program" class="btn-p v1 btn-blue icon-v1 rounded">Apply Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div><br><br>
+           
+          </div>         
+        </div>
+      </div>
+    </div>
+   
+  </section><br>
+  <!-- <section class="pricing-plan mb-120">
+    <div class="container-xl">
+      <div class="section-title center">
+        <div class="section-title-inner center">
+          <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1000">Job</h4>
+          <h2 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000" >Latest Job on Experts Skill Merge </h2>
+        </div>
+      </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                tabindex="0">
+                
+                <div class="row" style="margin-top:-130px">
+                  @for (item of jobData; track $index) {
+                    <div class="col-xxl-4 col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-delay="100">
+                        <div class="pricing-card">
+                            <div class="card-icon">
+                                <i class="my-icon icon-technology-and-it"></i>
+                            </div>
+                            <div class="pricing-top-content">
+                                <h3 class="title">{{item.course_title}}</h3>
+                            </div>
+                            <div class="wave-img">
+                                <img src="assets/img/pricing-plan/wave-img.png" alt="wave-img">
+                            </div>
+                            <div class="pricing-bottom-content">
+                                <p class="para">This category typically offers access to the educuion facilities and
+                                    basic equipment.</p>
+                                <ul class="check-box v3">
+                                    <li class="box-item">
+                                        <div class="item-icon">
+                                            <i class="my-icon icon-checkmark-2"></i>
+                                        </div>
+                                        <p class="item-para">Monitoring security systems</p>
+                                    </li>
+                                    <li class="box-item">
+                                        <div class="item-icon">
+                                            <i class="my-icon icon-checkmark-2"></i>
+                                        </div>
+                                        <p class="item-para">Assisting in vulnerability 
+                                          assessments </p>
+                                    </li>
+                                    <li class="box-item">
+                                        <div class="item-icon">
+                                            <i class="my-icon icon-checkmark-2"></i>
+                                        </div>
+                                        <p class="item-para">Investing security breaches</p>
+                                    </li>
+                                   
+
+                                </ul>
+                                <div class="all-btn">
+                                    <a href="#" class="btn-p v1 btn-blue rounded icon-v1">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  }
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>    -->
+<section id="bg11">
+    <div class="container-lg">
+      <div class="about-us-content">
+        <div class="row ">
+          <div class="col-lg-6 col-md-6">           
+            <img [src]="baseurl1+'/'+hackData[0].image"  class="responsive" id="imgh"/>        
+          </div>
+          <div class="col-lg-6 col-md-6 " >
+            <div class="about" >
+              <div class="section-title center">
+                <div class="section-title-inner center">
+                  <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1000" id="div2">Hackverse  TechPark </h4>
+                  <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="1000" id="h21"><b> {{hackData[0].title}}</b>                   
+                  </h2>
+                  <p style="text-align:justify; color:#fff;font-size:16px; " [innerHTML]="hackData[0].description"></p>
+                  <div class="button-container">
+                    <a href="https://wa.me/9946746422" class="inline-button"> <img src="assets/img/smicon-02.png" alt="">Whatsapp</a>
+                    <a href="#" class="inline-button"><img src="assets/img/smicon-01.png" alt="">Telegram</a>
+                  </div>
+                  </div>
+                      
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- <div id="p10">
+<div class="container">
+        <div class="section-title center" >
+            <div class="section-title-inner center"><br>
+                  <h2 class="big-title s-color-black"> Associated Companies</h2>                
+            </div>
+        </div>
+        <div class="section-title center" >
+        <div class="row align-items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+          <img src="assets/img/eme.png" style="width:70%;height:70%;margin:auto;display:block"/>
+         </div>          
+          </div>
+         
+        
+        <!-- @for (item of parent_companies; track $index) {
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">                       
+              <div class="company">                             
+                    <img [src]="baseurl11+'/'+item.icon_image" alt="{{ item.title }}"  style="width:50%;height:50%;margin:auto;display:block"/>
+                     <!-- <br>
+                    <p>{{ item.title }}</p> --
+                  </div>
+              </div>
+         }  --
+        </div> 
+        </div>    
+    <!-- <div class="swiper mySwiper-logo">
+      <div class="swiper-wrapper">
+      
+        <!-- <div class="swiper-slide">
+          <a>
+          
+            <img [src]="baseurl11+'/'+item.icon_image" alt="{{ item.title }}"  style="width:80%;"/>
+          </a>
+        </div> --
+
+        <div class="slider">
+          <div class="slide-track">
+            @for (item of parent_companies; track $index) {
+            <div class="slide">
+              <img [src]="baseurl11+'/'+item.icon_image" alt="{{ item.title }}"  style="width:50%;"/>
+            </div>
+            }
+        
+          
+          </div>
+        </div>
+        
+      </div>
+    </div> --
+</div>
+</div> -->
+<section  class="v1 py-120 @" id="d">
+    <div class="text-center pos-r">
+    <div class="container-lg">
+      <div class="section-title center">
+        <div class="section-title-inner center">
+          <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1000">Our Framework</h4>
+          <h2 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000" >Stepping stone to Success</h2>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div id="svg-container">
+          <svg id="svgC" width="100%" height="100%" viewBox="0 0 620 120" preserveAspectRatio="xMidYMid meet"><desc>Created with Snap</desc><defs></defs><path d="M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6 35 39.6 37.6 42.8 6.2 72.9-53.4 116-58.9 65-18.2 191 101 215 28.8 5-16.7-7-49.1-34-44-34 11.5-31 46.5-14 69.3 9.38 12.6 24.2 20.6 39.8 22.9 91.4 9.05 102-98.9 176-86.7 18.8 3.81 33 17.3 36.7 34.6 2.01 10.2.124 21.1-5.18 30.1" id="squiggle" fill="none" stroke="rgba(0,0,0,0.1)" strokeMiterLimit="10" strokeDashOffset="180" style="stroke-width: 1; stroke-dasharray: 5, 10; stroke-dashoffset: 10;"></path><g transform="matrix(0.2956,-0.9553,0.9553,0.2956,43.2367,24.8965)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g><g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"><polyline points="0, 30, 15, 0, 30, 30" id="plane" fill="rgba(0,0,0,0.05)"></polyline></g></svg>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <div class="work-process">
+           
+            <div class="step-num-box">
+              <div class="step-icon"><span>
+                <img [src]="baseurl1 + '/' + this.whatwe_Data[0].icons" alt="courses-img" id="icon1" /></span>
+              
+              </div>
+              <div class="step-num">01</div>
+            </div> <br><br>
+            <div class="card">
+             
+              <h4 id="h4">{{this.whatwe_Data[0].title}}</h4>
+              <p class="mb-0" style="font-size: 14px !important;" [innerHTML]="this.whatwe_Data[0].description
+              "> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 md-mt-5">
+          <div class="work-process">
+           
+            <div class="step-num-box">
+              <div class="step-icon"><span>
+                <img [src]="baseurl1 + '/' + this.whatwe_Data[1].icons" alt="courses-img" id="icon1" /></span>
+              </div>
+              <div class="step-num">02</div>
+            </div>
+            <div class="step-desc">
+              <div class="card1">
+                <h4 id="h4">{{this.whatwe_Data[1].title}}</h4>
+                <p class="mb-0" style="font-size: 14px !important;"  [innerHTML]="this.whatwe_Data[1].description
+                "></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 md-mt-5">
+          <div class="work-process">
+            <div class="step-num-box">
+              <div class="step-icon"><span>
+                <img [src]="baseurl1 + '/' + this.whatwe_Data[2].icons" alt="courses-img" id="icon1" /></span>
+              </div>
+              <div class="step-num">03</div>
+            </div>
+            <div class="step-desc">
+              <br><br>
+              <div class="card">
+                <h4 id="h4">{{this.whatwe_Data[2].title}}</h4>
+                <p class="mb-0" style="font-size: 14px !important;"  [innerHTML]="this.whatwe_Data[2].description
+                "> </p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 md-mt-5">
+          <div class="work-process">
+            <div class="step-num-box">
+              <div class="step-icon"><span>
+                <img [src]="baseurl1 + '/' + this.whatwe_Data[3].icons" alt="courses-img" id="icon1" /></span>
+              </div>
+              <div class="step-num">04</div>
+            </div><br><br>
+            <div class="step-desc">
+              <div class="card1">
+                <h4 id="h4">{{this.whatwe_Data[3].title}}</h4>
+                <p class="mb-0" style="font-size: 14px !important;"  [innerHTML]="this.whatwe_Data[3].description
+                "></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+<section class="case-studies v1">
+  <div class="container">
+    <div class="section-title center">
+      <div class="section-title-inner center w-v3"><br>
+          <h4 class="sub-title" data-aos="fade-down" data-aos-duration="2000">WHY?</h4>
+          <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="2000">Why Choose Us</h2>
+      </div>
+  </div>
+  <div class="row">
+  @for (item of whyData; track $index) {
+    <div class="col-lg-4"  data-aos="fade-up" data-aos-duration="1500">
+  <div class="benefits">
+    <div class="benefit">
+      <div class="number">{{item.title}}</div>
+     
+    </div>
+  </div>
+  </div>
+  }
+  <div class="col-lg-4"  data-aos="fade-up" data-aos-duration="1500">
+    <div class="benefits">
+      <div class="benefit1">
+        <div class="number">Certifications</div>
+        <p style="font-size: 10px !important;margin-left: 5px;;">Global Certifications,Internship Completion certificates, Work Experience,Internship Performance Letter* </p>
+             </div>
+    </div>
+    </div>
+</div>
+
+
+
+   
+  </div>
+  <div id="hide"></div>
+</section>
+<section class="how-it-work v1 @ py-120">
+  <div class="container">
+      <div class="section-title center">
+          <div class="section-title-inner center w-v3">
+              <h4 class="sub-title" data-aos="fade-down" data-aos-duration="2000">Approach</h4>
+              <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="2000">Our Approach</h2>
+          </div>
+      </div>
+      <div class="how-it-work-content v1" data-aos="fade-down" data-aos-duration="2000">
+          <div class="work-content-1">
+              <h4 class="work-title">{{approchData[0].title}}</h4>
+              <p class="work-para">{{approchData[0].description}}</p>
+              <div class="work-icon">
+                <img src="assets\img\our-approach.png" style="width:50px">                       
+              </div>
+          </div>
+          <div class="work-content-2">
+              <h4 class="work-title text">{{approchData[1].title}}</h4>
+              <p class="work-para text">{{approchData[1].description}}</p>
+              <div class="work-icon">
+                <img src="assets\img\our-approach.png" style="width:50px">     
+              </div>
+          </div>
+          <div class="work-content-3">
+              <h4 class="work-title text">{{approchData[2].title}}</h4>
+              <p class="work-para text">{{approchData[2].description}}</p>
+              <div class="work-icon">
+                <img src="assets\img\our-approach.png" style="width:50px">   
+              </div>
+          </div>
+          <div class="work-content-4">
+              <h4 class="work-title text">{{approchData[3].title}} </h4>
+              <p class="work-para text">{{approchData[3].description}}</p>
+              <div class="work-icon">
+                <img src="assets\img\our-approach.png" style="width:50px">      
+              </div>
+          </div>
+          <div class="work-content-1">
+              <h4 class="work-title text">{{approchData[4].title}}</h4>
+              <p class="work-para text">{{approchData[4].description}}</p>
+              <div class="work-icon">
+                <img src="assets\img\our-approach.png" style="width:50px">   
+              </div>
+          </div>
+          @if(approchData[5]){
+            <div class="work-content-2">
+             <h4 class="work-title text">{{approchData[5].title}}</h4>
+            <p class="work-para text">{{approchData[5].description}}</p>
+            <div class="work-icon">
+              <img src="assets\img\our-approach.png" style="width:50px">     
+            </div> 
+        </div>}
+          <div class="middle-img-circle  d-none d-md-block">
+              <img src="assets/img/how-it-work/middle-image-circle.png" alt="middle-img-circle">
+          </div>
+          <div class="middle-img  d-none d-md-block">
+            <img [src]="this.approach_bg" alt="courses-img"/>  
+          </div>
+      </div>
+  </div>
+</section>
+<!-- <section class="our-best-team v1 @ py-120">
+
+
+  <div class="container">
+      <div class="student-feedback-content">
+          <div class="row">
+            
+              <div class="col-lg-5">
+                  <div class="feedback-left-content">
+                      <div class="feedback-left-img" data-aos="zoom-in-up" data-aos-duration="2000">
+                        <img src="assets/img/student-feedback.jpg" alt="feedback-right-img">
+                      </div>
+                      <!-- <div class="feedback-right-bg-img">
+                          <img src="assets/img/student-feedback/feedback-left-bg.png" alt="feedback-left-bg-img">
+                      </div> --
+                  </div>
+              </div>
+              <div class="col-lg-7">
+                  <div class="feedback-right-content">
+                      <div class="section-title">
+                          <div class="section-title-inner">
+                              <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">Student Feedback
+                              </h4>
+                              <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="1500" id="h2">Our
+                                  Student feedback</h2>
+                          </div>
+                      </div>
+                      <div class="swiper my-swiper-student-slider">
+                          <div class="swiper-wrapper">
+                            @for (item of approchData; track $index) {
+                              <div class="swiper-slide">
+                                <div class="student-feedback-info">
+                                  <div class="student-profile">
+                                    <div class="student-img">
+                                      <img [src]="item.imgSrc" alt="student-img">
+                                    </div>
+                                    <div class="student-content">
+                                      <h4 class="content-title">{{ item.title }}</h4>
+                                      <p class="content-para">{{ item.description}</p>
+                                    </div>
+                                  </div>
+                                  <p class="info-para">{{ item.feedback }}</p>
+                                
+                                  <!-- <ul class="star">
+                                    <li *ngFor="let star of getStars(item.rating); let j = index" [class]="star ? 's-color-white' : 'color-grey'">
+                                      <i class="my-icon icon-star"></i>
+                                    </li>
+                                  </ul> --
+                                </div>
+                              </div>
+                          
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        
+                      <!-- <div class="feedback-right-bg">
+                        <img src="assets/img/student-feedback/student-img-1.jpg">
+                      </div> --
+                      <div class="quat-big-icon">
+                          <i class="my-icon icon-quote"></i>
+                      </div>
+                    }
+                 </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  </div>
+      
+</section>     -->
+<section style="background-color: aliceblue; padding: 10px;;">
+  <div class="container">
+   
+    <div class="section-title center">
+      <div id="hide"></div>
+      <div class="section-title-inner center">
+        
+        <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1000">Testimonial</h4>
+        <h3 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1000" >Stories of Success</h3>
+      </div>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+      @for (item of testData;; track $index) {
+      <ng-template carouselSlide style="padding:10px;" > 
+         <div class="courses-card " >
+        <div class="row" id="card1">
+          <div class="col-lg-4">
+            <div class="user-img">                     
+              <img [src]="baseurl1+'/'+item. client_image" alt="{{ item.title }}"  id="test"/>
+             </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="courses-card-content">
+              <h4 class="title" style="text-align: center;font-size: 20px;color:#fff !important;">{{item. client_data}}</h4>
+             <p style="color:#fff;font-size: 12px !important;text-align: justify;" [innerHTML]="item.description"></p>
+          </div>
+          </div>
+        </div>  
+       </div></ng-template> 
+      } 
+    </owl-carousel-o>
+  </div>
+</section>
+  <section class="why-choose-us v1 my-120 @">
+    <div class="container">
+      <div class="choose-us-content">
+        <div class="choose-us-right-content">
+          <div class="section-title">
+            <div class="section-title-inner">
+              <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">FAQ</h4>
+              <h3 class="big-title" data-aos="fade-up" data-aos-duration="1500">Frequently Ask Question?</h3>
+              <!-- <p class="title-para sp-color-black" data-aos="fade-up" data-aos-duration="1500">Teachers play a
+                critical role in education by instructing and guiding for students,
+                facilitating learning, providing support and encouragement, and fostering a positive</p> -->
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            @for (item of faqData; track $index) {
+              <div class="col-lg-6">
+                  <div class="case-studies-left-content">
+                    <ul class="why-choose-us-accordion" id="accordionExample">
+                       
+                        <li class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                  [attr.data-bs-target]="'#collapse' + $index" aria-expanded="false" 
+                                  [attr.aria-controls]="'collapse' + $index">
+                                  <span class="button-number">{{ $index + 1 }}</span>{{ item.question }}
+                                </button>
+                          </h2>
+                          
+                          <div [id]="'collapse' + $index" class="accordion-collapse collapse"  
+                                [attr.data-bs-parent]="'#accordionExample'">
+                                <div class="accordion-body" [innerHTML]="item.answer">                                 
+                                </div>
+                              </div>
+                        </li>
+                    
+                      </ul>
+                  </div>
+              </div>
+            }
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <!-- <div class="choose-us-slide">
+      <h2 class="choose-us-slide-text v1 text">ONLINE CLASS </h2>
+      <h2 class="choose-us-slide-text text">Courses CLASS</h2>
+      <h2 class="choose-us-slide-text v2 text">ONLINE CLASS </h2>
+      <h2 class="choose-us-slide-text v1 text">ONLINE CLASS </h2>
+      <h2 class="choose-us-slide-text text">Courses CLASS</h2>
+      <h2 class="choose-us-slide-text v2 text">ONLINE CLASS </h2>
+      <h2 class="choose-us-slide-text v1 text">ONLINE CLASS </h2>
+      <h2 class="choose-us-slide-text text">Courses CLASS</h2>
+      <h2 class="choose-us-slide-text v2 text">ONLINE CLASS </h2>
+    </div> -->
+    <div class="why-choose-us-background-img">
+      <img src="assets/img/why-choose-us/background-img.png" alt="background-img">
+    </div>
+  </section>
+  <section class="register-now" style="min-height: 350px;">
+    <div class="container">
+        <div class="section-title center">
+            <div class="section-title-inner center">
+                <!-- <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">Register</h4> -->
+                <!-- <h3 class="big-title s-color-white" data-aos="fade-up" data-aos-duration="1500" id="h2">Register Now </h3>  -->
+                <p style="color:#fff">Ready to Elevate Your Career? Let's Begin Your Transformation</p>      
+                <div class="check-box">
+                  <div class="all-btn">
+                    <button class="btn-p v1 rounded btn-white"  data-toggle="modal" data-target="#myModal" >
+                      Register
+                    </button>
+                  </div>
+                  </div>
+            </div>
+           
+        </div>
+        
+        <div class="get-free-now v1">
+  <!-- <div class="get-free-content">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="get-free-left-content" data-aos="zoom-in-up" data-aos-duration="2500">
+          <img src="assets/img/register-now.png" alt="student-img" />
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="get-free-right-content">
+          <div class="section-title">
+            <div class="section-title-inner">
+              <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">Get Free Now</h4>
+              <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="1500"> Register Now </h2>
+              <p class="title-para sp-color-black" data-aos="fade-up" data-aos-duration="1500">
+                Register now to gain access to exclusive content, stay updated with the latest news, and be a part of our vibrant community. Don’t miss out—sign up today and start your journey with us!
+              </p>
+            </div>
+          </div>
+          <form class="get-free-form-content" [formGroup]="contactForm" (ngSubmit)="contact()" >          
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="form-box">
+                  <input type="text" placeholder="Your Name" formControlName="name"><br>
+                 
+                </div>
+                @if(this.contactForm.get('name')?.hasError('required')&&this.contactForm.get('name')?.touched){
+                  <div class="form-error" > Name is Required</div>
+                                               
+                } @else if(this.contactForm.get('name')?.hasError('pattern')){
+                  <div class="form-error" >Invalid  Name</div>
+                } 
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="form-box">
+                  <input type="email" placeholder="Email Address" formControlName="email"/>
+                </div>
+              </div>
+              
+             </div>
+                
+               <div class="row" style="padding:10px;">
+                <div class="form-box">
+                  <input type="text" placeholder="Mobile number"  name="phone" formControlName="phone">
+                </div>
+                  @if(this.contactForm.get('phone')?.hasError('required')&&this.contactForm.get('phone')?.touched){
+                      <div class="form-error" >Mobile Number is Required</div>
+                                                   
+                    } @else if(this.contactForm.get('phone')?.hasError('pattern')){
+                      <div class="form-error" >Invalid Mobile Number</div>
+                    }
+               
+               </div>  
+            <div class="form-box-last">
+              <textarea cols="30" rows="10" placeholder="Type Your Message" formControlName="message" ></textarea>
+            </div>
+            <div class="check-box">
+              <div class="all-btn">
+                <button class="btn-p v1 rounded btn-blue" type="submit">
+                  Submit
+                </button>
+              </div>
+              @if (this.msg) {
+                <div  class="alert alert-warning" role="alert">
+                   <p >{{this.msg}}</p>
+                 </div>
+               }
+               @if (this.errorMsg){
+                 <div class="alert alert-warning" role="alert">
+                   <p >{{this.errorMsg}}</p>
+                 </div>
+               }
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+    </div>
+    <!-- <div class="background-big-img">
+        <img src="assets/img/register-now/background-img.png" alt="background-img">
+    </div> -->
+</section>
+<section class="our-blog v1 @ py-120">
+  <div class="container">
+    <div class="section-title v2">
+      <div class="section-title-inner w-v2">
+          <h4 class="sub-title" data-aos="fade-down" data-aos-duration="1500">Our Blog</h4>
+          <h2 class="big-title s-color-black" data-aos="fade-up" data-aos-duration="1500">Hackverse Upcoming Program List</h2>
+      </div>
+      <div class="all-btn mt-15" data-aos="fade-up" data-aos-duration="1500">
+        <a routerLink="/blog" class="btn-p v1 btn-blue rounded icon-v1">VIEW ALL BLOG</a>
+      </div>
+  </div>
+    <div class="blog-cards v1">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-xl-5" data-aos="fade-right" data-aos-duration="1500">
+          <div class="card-content-1">
+            <div class="card">               
+              <img [src]="baseurl1 + '/' + data1.image" alt="courses-img"  style="width:100%"/>  
+            </div>
+            <div class="content-data">             
+              <h3 class="big-title">{{data1.title}}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-xl-7">
+          @for (item of newsData; track $index) {
+          <div data-aos="fade-left" data-aos-duration="1500">
+            <div class="card-content-2">
+              <div class="card-img-2">
+                <img [src]="baseurl1 + '/' + item.image" alt="courses-img" />  
+              </div>
+              <div class="content-data">               
+                <h3 class="big-title"><a >{{item.title}}</a></h3>
+                <p class="para" [innerHTML]="item.description | slice:0:300"></p>
+                </div>
+              </div>
+          </div>
+        }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="v1 @ py-100">
+   <div class="container-lg">
+
+    <h4 style="padding-bottom: 10px;">Ethical Hacker Training in Kochi</h4>
+    <p>
+      Unlock your cybersecurity potential with our training at <a id="a1" href="https://www.skillmerge.in/">Expert's Skill Merge Hub</a>. Learn the power of ethical hacking and how to protect against cyber threats. Our Hire to Train program is perfect for beginners and pros alike, offering a chance to become a certified ethical hacker
+    </p>
+  
+
+  <div *ngIf="showContent" class="content" >
+    <!-- Insert your content here -->
+    <img src="assets/img/ethical hacker.jpg" alt="ethical hacker training" id="img1">
+ 
+      <div class="custom-list">
+        <h4>Key Takeaways</h4>
+        <ul >
+            <li>Gain expertise in ethical hacking and penetration testing</li>
+            <li>Unlock career opportunities in the thriving cybersecurity industry</li>
+            <li>Learn from industry-leading experts and stay ahead of the curve</li>
+            <li>Earn a recognized ethical hacker certification</li>
+            <li>Develop hands-on skills in information security and vulnerability assessment</li>
+        </ul>
+  
+
+
+
+        <blockquote>"The best way to predict the future is to create it." - Peter Drucker</blockquote>
+
+    <h4>What is Ethical Hacking?</h4>
+    <p>Ethical hacking, or penetration testing, is about finding and using weaknesses in systems or networks to check their security. Ethical hackers, or white hat hackers, do the same things as bad hackers but to make systems safer.</p>
+
+    <h4>The Importance of Ethical Hacking in Today's Cyber Landscape</h4>
+    <p>The role of ethical hacking is more critical than ever. It helps find hidden weaknesses by mimicking real attacks. This lets companies fix their security and protect their important data.</p>
+    <p>Ethical hacking also helps companies follow important rules like <a href="https://www.pcisecuritystandards.org/">PCI DSS</a> and HIPAA. By fixing security issues early, companies avoid big data breaches, damage to their reputation, and legal trouble.</p>
+
+    <blockquote>"Ethical hacking is not about finding vulnerabilities, but about securing them."</blockquote>
+    <p>In the world of cybersecurity, ethical hacking is a vital defense against bad hackers. By learning from ethical hackers, companies can protect their digital world and keep their customers' trust.</p>
+
+    <h4>Expert's Skill Merge Hub: A Game-Changer in Ethical Hacker Training</h4>
+    <p>In today's fast-changing world, learning to fight cyber threats is key.<a href="https://www.skillmerge.in/">  Expert's Skill Merge Hub</a>  is leading the way in ethical hacker training. It's changing how people learn to protect our digital world.</p>
+    <p><a href="https://www.skillmerge.in/"> Expert's Skill Merge Hub</a>  combines top-notch training, expert teachers, and real-world practice. It's a unique hacker training program that teaches you the latest in ethical hacking. You'll learn how to think like hackers and protect against threats.</p>
+   <p>At Expert's Skill Merge Hub, they focus on being the best and always innovating. Their program keeps up with the latest in penetration testing and ethical hacking. You'll learn about network security, finding vulnerabilities, and how to handle cyber attacks.
+  </p>
+  <blockquote>"Expert's Skill Merge Hub has been a game-changer in my journey to becoming an ethical hacker. The hands-on training and expert guidance have equipped me with the skills and confidence to tackle real-world cybersecurity challenges."
+  </blockquote>
+
+    <p>With top instructors and the latest tech,Expert's Skill Merge Hub keeps its ethical hacker training program ahead. It's perfect for anyone looking to start or grow a career in information security.</p>
+
+    <a href="https://www.youtube.com/watch?v=fNzpcB7ODxQ" target="_blank">Watch our training video.</a>
+
+    <h4>The Hire to Train Program: Bridging the Gap</h4>
+    <p>At Expert's Skill Merge Hub, we know how key hands-on experience is in ethical hacking and cybersecurity. That's why we've created the Hire to Train program. It lets you start as an intern right away while getting top-notch ethical hacker training.</p>
+    <h4>Benefits of the Hire to Train Program</h4>
+    <p>The Hire to Train program at Expert's Skill Merge Hub has many perks for starting your information security career:
+    </p>
+   
+        
+        <ul>
+            <li>Get real-world internships in Kochi experience from day one</li>
+            <li>Get personalized mentorship from top experts to improve your ethical hacking skills</li>
+            <li>Follow a clear path to become a certified ethical hacker and boost your job chances</li>
+            <li>Learn the newest cybersecurity trends and best practices</li>
+            <li>Discover advanced ethical hacking methods and techniques</li>
+        </ul>
+      <p>By mixing hire to train chances with detailed training, Expert's Skill Merge Hub makes sure you get the knowledge and hands-on experience needed to excel in information security</p>
+
+    <blockquote>"The Hire to Train program at Expert's Skill Merge Hub was a game-changer for me. It allowed me to start building my career in ethical hacking from day one while also providing me with the necessary training and support to become a certified professional." - Jishnu, Ethical Hacker Trainee</blockquote>
+
+    <h4>Key Benefits of Hire to Train Program</h4>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Benefits</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hands-on Experience</td>
+                <td>Gain practical experience through real-world internships in Kochi</td>
+            </tr>
+            <tr>
+                <td>Personalized Mentorship</td>
+                <td>Receive guidance from industry experts to develop your ethical hacking skills</td>
+            </tr>
+            <tr>
+                <td>Certification Pathway</td>
+                <td>Earn a clear path to becoming a certified ethical hacker</td>
+            </tr>
+            <tr>
+                <td>Comprehensive Training</td>
+                <td>Explore the latest cybersecurity trends and best practices</td>
+            </tr>
+        </tbody>
+    </table>
+<br>
+    <h4>Ethical Hacker Training: A Hands-On Approach</h4>
+    <p>Dive into our detailed ethical hacker training program. It combines theory and practice. You'll learn the skills needed to become a certified ethical hacker.</p>
+
+   
+        <h4>Curriculum Overview</h4>
+        <p>Our program covers key topics like:</p>
+        <ul>
+            <li>Network security basics</li>
+            <li>Penetration testing methods</li>
+            <li>Finding and fixing vulnerabilities</li>
+            <li>Cryptography and secure communication</li>
+            <li>Hacking techniques and tools</li>
+            <li>Handling incidents and forensic analysis</li>
+            <li>Following ethical standards and laws</li>
+        </ul>
+ 
+
+    <p>Our experts will teach you through interactive lessons, real-world examples, and lab sessions. You'll learn to tackle the complex world of ethical hacking and cybersecurity. Discover the world of ethical hacking and information security through our hands-on training. Start your journey to become a skilled ethical hacker and help protect our digital world.</p>
+
+    <blockquote>"The future of cybersecurity lies in the hands of ethical hackers who can think like the adversary and stay one step ahead."</blockquote>
+
+    <h4>Exploring the World of Penetration Testing</h4>
+    <p>In the world of ethical hacking, penetration testing is key. It helps make an organization's cybersecurity stronger. Penetration testing, or pentesting, checks an organization's systems, networks, and apps. It finds weak spots that bad guys could use.</p>
+
+    <p>Good ethical hackers use many methods and tools for penetration testing. They do things like:</p>
+    <ul>
+        <li>Network scanning and finding vulnerabilities</li>
+        <li>Testing web apps</li>
+        <li>Doing social engineering attacks</li>
+        <li>Checking wireless network security</li>
+        <li>Trying to get more access and move around</li>
+    </ul>
+
+    <p>By fixing these weak spots, companies can make their information security better. This helps protect against cyber attacks and keeps important stuff safe.</p>
+<p>The knowledge from penetration testing helps companies make smart choices. They can focus on improving security and put in place strong cybersecurity steps. This teamwork between ethical hackers and companies makes the information security world stronger.
+</p>
+    <blockquote>"Penetration testing is not just a tool, but a mindset – a way of thinking that proactively seeks to uncover vulnerabilities and strengthen an organization's security posture."</blockquote>
+<p>The digital world keeps changing, and so does the need for ethical hackers and penetration testing. By getting into this field, companies can keep up with threats. They can protect their systems and data from new dangers in the cybersecurity world.
+</p>
+    <h4>Ethical Hacker Certification: A Pathway to Success</h4>
+    <p>In the fast-paced world of cybersecurity, getting an ethical hacker certification is a big deal. It's a key step for those aiming to stand out in the field. Getting certified, like the Certified Ethical Hacker (CEH) title, can lead to a fulfilling career in info security. It also boosts your reputation as a cybersecurity pro.</p>
+   <p>Having an ethical hacker certification shows you're up-to-date with the latest in cybersecurity. It proves you can think like a hacker and spot threats early. This skill is a big plus for companies that focus on keeping their data safe.
+</p>
+    <ul>
+        <li>Enhance your understanding of the latest hacking techniques and methodologies</li>
+        <li>Gain practical experience in conducting penetration testing and vulnerability assessments</li>
+        <li>Develop a comprehensive knowledge of information security protocols and best practices</li>
+        <li>Increase your marketability and earning potential in the cybersecurity job market</li>
+    </ul>
+
+    <p>Getting certified as an ethical hacker not only proves your skills but also makes you a go-to expert for companies. This can lead to exciting roles like consulting or security analyst positions. Your expertise can really make a difference.</p>
+    <blockquote>"Ethical hacking is not just a certification – it's a mindset that empowers you to be a proactive guardian of digital assets."
+    </blockquote>
+    <p>Choosing to become a certified ethical hacker shows your deep commitment to info security. It's a challenging but rewarding path. It will broaden your knowledge and make you a key player in the cybersecurity world.</p>
+    <img src="assets/img/Picture1.png" alt="ethical hacker training" id="img1">
+    <h4>Ethical Hacker Training: Internships in Kochi    </h4>
+    <p>Are you dreaming of becoming an ethical hacker? Kochi, a key hub for cybersecurity and information security in India, has amazing internship opportunities. <a href="https://www.skillmerge.in/"> Expert's Skill Merge Hub</a>  is a top training center. It focuses on teaching the next generation of ethical hacking experts through detailed hacking courses.
+    </p>
+    <p>These internships in Kochi at Expert's Skill Merge Hub give you real-world experience in ethical hacking. You'll work with top experts, learning about penetration testing, vulnerability assessment, and new security methods. This experience will prepare you to succeed in ethical hacking</p>
+  <p>The internships in Kochi also offer a unique Hire to Train program. It lets talented people start their careers as certified ethical hacking professionals. The program combines training, mentorship, and job help. It ensures interns get the skills and find good jobs in the field.</p>  
+  <h4>Internship Benefits</h4>
+  <br>
+  <table>
+      <thead>
+          <tr>
+              <th>Hire to Train Advantages</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Real-world Experience</td>
+              <td>Get hands-on experience in ethical hacking while learning from experts.</td>
+          </tr>
+          <tr>
+              <td>Certification Pathway</td>
+              <td>Follow a clear path to become a certified ethical hacker</td>
+          </tr>
+          <tr>
+              <td>Skill Development</td>
+              <td>Improve your skills in vulnerability assessments and penetration testing.</td>
+          </tr>
+          <tr>
+              <td>Job Placement Support</td>
+              <td>Get assistance in finding job opportunities in the cybersecurity field.</td>
+          </tr>
+      </tbody>
+  </table>
+<br>
+<p>Interning at Expert's Skill Merge Hub is a step toward a successful career in ethical hacking. It provides valuable training and connects you with the right people in the industry.</p>
+<blockquote>"The ethical hacker internship program at Expert's Skill Merge Hub gave me the confidence and skills I needed to succeed in my career."
+  - Hiba, Ethical Hacker Intern
+</blockquote>
+<h4>Information Security: The Cornerstone of Ethical Hacking</h4>
+<p>In the world of cybersecurity, information security is key to keeping our digital spaces safe. Ethical hackers must grasp the complexities of information security and the changing cyber threats. This knowledge helps us defend against attacks and protect our digital assets.</p>
+<h4>Understanding Cyber Threats and Vulnerabilities</h4>
+<p>The fight against cyber threats is ongoing. Cybercriminals keep finding new ways to harm us. They use malware, phishing, SQL injections, and denial-of-service attacks to get to our data. Ethical hackers must stay ahead, using penetration testing to find and fix these weaknesses.</p>
+
+<ul>
+  <li>Understand the evolving landscape of information security and cybersecurity</li>
+  <li>Identify common cyber threats and vulnerabilities that pose risks to organizations</li>
+  <li>Develop strategies to proactively defend against hacking and penetration testing attempts</li>
+  <li>Leverage ethical hacking principles to safeguard critical information and assets</li>
+</ul>
+
+<table>
+  <thead>
+      <tr>
+          <th>Cyber Threat</th>
+          <th>Impact</th>
+          <th>Mitigation Strategies</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Malware Attacks</td>
+          <td>Data theft, system compromise, financial losses</td>
+          <td>Implement robust antivirus and anti-malware solutions, regularly update software, and educate users on safe browsing practices</td>
+      </tr>
+      <tr>
+          <td>Phishing Scams</td>
+          <td>Identity theft, credential compromise, social engineering</td>
+          <td>Raise user awareness, implement multi-factor authentication, and deploy email filtering and security solutions</td>
+      </tr>
+      <tr>
+          <td>SQL Injection Attacks</td>
+          <td>Data breaches, unauthorized access, system takeover</td>
+          <td>Ensure secure coding practices, implement input validation, and regularly assess web application vulnerabilities</td>
+      </tr>
+  </tbody>
+</table>
+<img src="assets/img/Picture2.png" alt="ethical hacker training" id="img1">
+
+<blockquote>"Information security is not just about technology, but also about people, processes, and culture. Effective information security requires a holistic approach that addresses all these elements."
+</blockquote>
+
+<p>Understanding the link between information security, cybersecurity, and ethical hacking is crucial. It gives us the tools to protect our digital world. As we delve deeper into penetration testing and ethical hacking, this knowledge will guide us towards a safer digital future.</p>
+
+<h4>Ethical Hacker Training: A Rewarding Career Choice</h4>
+
+<p>Starting a career as an ethical hacker is exciting and challenging. It offers personal and professional growth. In the world of cybersecurity, ethical hacker training is in high demand. It provides many opportunities to make a difference.</p>
+<p>More and more organizations need skilled ethical hackers to protect their digital assets. Ethical hacker training teaches you to find vulnerabilities and risks. It also shows you how to strengthen information security.</p>
+<p>One big perk of being an ethical hacker is the good pay. Reports say ethical hackers can earn more than the average cybersecurity worker.</p>
+<p>Ethical hacker training lets you work on various projects. You'll face new challenges and learn to adapt to cyber threats. Ethical hackers help protect important systems and data</p>
+<p>If you love technology and solving problems, ethical hacker training is for you. It's a rewarding path that lets you join the top cybersecurity team. Start this journey and help shape the future of digital security.</p>
+<hr>
+<h4>Conclusion</h4>
+<p>As we wrap up our look at ethical hacker training, it's clear that cybersecurity is more crucial than ever. The need for skilled ethical hackers is growing fast. This is because companies want to keep their digital stuff safe from cyber attacks.</p>
+
+<p>By choosing  <a href="https://www.skillmerge.in/" target="_blank"> Expert's Skill Merge Hub</a>, you can start a rewarding career in ethical hacking. This field is all about keeping information safe from hackers. It's a vital job that's in high demand</p>
+
+<p>The Expert's Skill Merge Hub program gives you top-notch training. You'll learn the latest in ethical hacking, from the basics to advanced techniques. This training prepares you to be a top-notch ethical hacker.</p>
+
+<p>Joining this program means you'll be part of a team that protects our digital world. It's a chance to be a cybersecurity expert. You'll help keep our online world safe from threats.</p>
+<p>The future of ethical hacking looks bright. With <a href="https://www.skillmerge.in/" target="_blank"> Expert's Skill Merge Hub</a>, you can make a real difference in information security. Start your journey today and become a certified ethical hacker. You'll be at the forefront of fighting cyber threats.</p>
+
+<hr>
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+    <br>
+    <div class="all-btn mt-15" data-aos="fade-up" data-aos-duration="1500">
+      <a  (click)="toggleContent()" class="btn-p v1 btn-blue rounded icon-v1" style="color:#ffd !important">{{ showContent ? 'Hide' : 'Explore' }}</a>
+    </div>
+    <!-- <button (click)="toggleContent()" class="btn btn-primary">{{ showContent ? 'Hide' : 'Explore' }}</button> -->
+  </div>
+</section> 
+       
+  <div class="modal fade custom-modal"  id="myModal" role="dialog">
+    <!-- modal dialog -->
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- modal header -->
+        
+        <!-- end modal header-->
+        <!-- modal body -->
+        <div class="modal-body d-flex">
+          <!-- Left Column: Information Section -->
+          <div class="info-section"> 
+            <h2>Enroll in Intership Now 
+              <span class="highlight"></span></h2>
+              <img src="assets/img/img12.png" alt=""  style="width:300px;margin:auto;display: block;">
+            <!-- <p class="subheading">Join our industry-recognized courses and internships in Cybersecurity, Artificial Intelligence, and Full Stack Development, with 100% placement guarantee</p> -->
+           <br>
+            <ul>
+              <li>✔ Cyber Security </li>
+              <li>✔ Ethical Hacking</li>
+              <li>✔ Full Stack Development </li>
+              <li>✔ Artificial Intelligence</li>
+             
+            </ul>
+          </div>
+          
+          <!-- Right Column: Registration Form Section -->
+          <div class="form-section">
+            <!-- Close Button at Top Right -->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div style="height:40px"></div>
+            <h3>Register for Free Career Guidance</h3>
+            <form [formGroup]="contactForm">
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="name" placeholder="Name *" required=""/>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email *" required="" />
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" formControlName="phone" placeholder="Phone *" required=""/>
+              </div>
+              <div class="form-group">
+                <select required formControlName="course">
+                  <option value="">Preferred Course *</option>
+                  <option value="Cybersecurity">Cybersecurity</option>
+                  <option value="Artificial Intelligence">Artificial Intelligence</option>
+                  <option value="Full Stack Development">Full Stack Development</option>
+                  <option value="Ethical Hacking">Ethical Hacking</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select required formControlName="mode">
+                  <option value="">Preferred Learning Mode *</option>
+                  <option value="Online">Online</option>
+                  <option value="On-site">On-site</option>
+                </select>
+              </div>
+              
+              <!-- "Enroll Now" Button positioned to the right -->
+              <button type="button" class="register-button" (click)="contact()">Enroll Now</button>
+            </form>
+            <p class="privacy-note">
+              By clicking Enroll Now, you agree to our Terms & Conditions and Privacy Policy.
+            </p>
+          </div>
+        </div>
+     
+        <!-- end modal footer -->
+      </div>
+      <!-- end modal content-->
+    </div>
+    <!-- end modal dialog-->
+  </div>
+
+<div id="myModal1" class="modal fade custom-modal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body d-flex">
+        <!-- Left Column: Information Section -->
+        <div class="info-section"> 
+          <h2>Enroll in Intership Now 
+            <span class="highlight"></span></h2>
+            <img src="assets/img/img12.png" alt=""  style="width:300px;margin:auto;display: block;">
+          <!-- <p class="subheading">Join our industry-recognized courses and internships in Cybersecurity, Artificial Intelligence, and Full Stack Development, with 100% placement guarantee</p> -->
+         <br>
+          <ul>
+            <li>✔ Cyber Security </li>
+            <li>✔ Ethical Hacking</li>
+            <li>✔ Full Stack Development </li>
+            <li>✔ Artificial Intelligence</li>           
+          </ul>
+        </div>
+        
+        <!-- Right Column: Registration Form Section -->
+        <div class="form-section">
+          <!-- Close Button at Top Right -->
+          <button type="button" class="close" aria-label="Close" (click)="closeModal2()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div style="height:40px"></div>
+          <h3>Register for Free Career Guidance</h3>
+          <form [formGroup]="contactForm">
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="name" placeholder="Name *" required=""/>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" formControlName="email" placeholder="Email *" required="" />
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" formControlName="phone" placeholder="Phone *" required=""/>
+            </div>
+            <div class="form-group">
+              <select required formControlName="course">
+                <option value="">Preferred Course *</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Full Stack Development">Full Stack Development</option>
+                <option value="Ethical Hacking">Ethical Hacking</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select required formControlName="mode">
+                <option value="">Preferred Learning Mode *</option>
+                <option value="Online">Online</option>
+                <option value="On-site">On-site</option>
+              </select>
+            </div>
+            
+            <!-- "Enroll Now" Button positioned to the right -->
+            <button type="button" class="register-button" (click)="contact()">Enroll Now</button>
+          </form>
+          <p class="privacy-note">
+            By clicking Enroll Now, you agree to our Terms & Conditions and Privacy Policy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <app-footer></app-footer> 
+}
+
+
+
+
+
+
+
+
+

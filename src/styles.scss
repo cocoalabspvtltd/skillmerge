@@ -1,1 +1,209 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "../node_modules/ngx-toastr/toastr.css";
+body{
+  font-family: 'Montserrat';
+}
+
+
+h2{
+    color: #182266 !important;
+}
+#h2{ color: #fff !important;
+p{
+  font-size:15px !important;
+  font-family:'Montserrat'  !important;
+}
+.check-box.v3 li{
+  font-size: 15px;;
+}
+}
+.breadcum-content .title {
+    color: #fff !important;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height */
+  }
+  .banner.v1 {
+    background: #22284d;
+    position: relative;
+    z-index: 1;
+}
+  .courses-plan.v1 {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(103.71deg, #f6f9fb 14%, rgba(181, 209, 221, 0.19) 97.69%) !important;
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(4.56%, #08132a), color-stop(13.87%, #09142a), color-stop(90.96%, #1b2e2c)); */
+    /* background: linear-gradient(180deg, #08132a 4.56%, #09142a 13.87%, #1b2e2c 90.96%); */
+  }
+  /* Loader Styling */
+/* Loader Styling */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #4e001b;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #182266;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+/* Animation Keyframes */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Class to Stop Animation */
+.animation-stop .loader,
+.animation-stop .loader::after {
+  animation: none;
+}
+
+
+/* Footer Text Colors */
+.footer-content.v1 .footer-widget .widget-title,
+.footer-content.v1 .footer-widget .get-in-touch .contact-info-items .contact-info-item .contact-info-content .title {
+  color: #fff !important;
+}
+
+/* Loader Container Styling */
+.container1 {
+  overflow: hidden;
+}
+
+/* Reset overflow on body for overall scrolling */
+body {
+  overflow: auto !important;
+}
+
+/* Mobile-Specific Styling */
+@media (max-width: 768px) {
+  .section-title .section-title-inner .big-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .my-120 {
+    margin: 50px 10px;
+  }
+  .py-120 {
+    padding: 20px 0;
+  }
+}
+.mat-typography h6 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is loaded */
+  font-weight: 400; /* Sets font weight to normal */
+  font-size: 16px !important; /* Adjusts font size */
+  line-height: 2.5rem; /* Adjusts line height */
+  margin: 0 0 0.5em; /* Adds bottom margin */
+ /* Overrides any previous color styling */
+}
+.mat-typography h5 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is loaded */
+  font-weight: 400; /* Sets font weight to normal */
+  font-size: 20px !important; /* Adjusts font size */
+  line-height: 2.5rem; /* Adjusts line height */
+  margin: 0 0 0.5em; /* Adds bottom margin */
+  /* Overrides any previous color styling */
+}
+.mat-typography h4 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is loaded */
+  font-weight: 400; /* Sets font weight to normal */
+  font-size: 22px !important; /* Adjusts font size */
+  line-height: 2.5rem; /* Adjusts line height */
+  margin: 0 0 0.5em; /* Adds bottom margin */
+  /* Overrides any previous color styling */
+}
+.mat-typography h3 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is loaded */
+  font-weight: 400; /* Sets font weight to normal */
+  font-size: 22px !important; /* Adjusts font size */
+  line-height: 2.5rem; /* Adjusts line height */
+  margin: 0 0 0.5em; /* Adds bottom margin */
+  /* Overrides any previous color styling */
+}
+.mat-typography h2 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is loaded */
+  font-weight: 400; /* Sets font weight to normal */
+  font-size: 22px !important; /* Adjusts font size */
+  line-height: 2.5rem; /* Adjusts line height */
+  margin: 0 0 0.5em; /* Adds bottom margin */
+  /* Overrides any previous color styling */
+}
+.mat-typography h1 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is loaded */
+  font-weight: 400; /* Sets font weight to normal */
+  font-size: 22px !important; /* Adjusts font size */
+  line-height: 2.5rem; /* Adjusts line height */
+  margin: 0 0 0.5em; /* Adds bottom margin */
+  /* Overrides any previous color styling */
+}
+html{height:fit-content;}
+
+.blog-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+// .blog-content img {
+//   margin: auto !important;
+//   display: block !important;
+// }
+.blog-content .para1 h3 {
+  font-size: 20px !important;
+}
+/* List style for unordered lists inside blog content */
+.blog-content .para1 ul {
+  list-style-type: disc !important; /* Use disc style for list items */
+  margin-left: 20px; /* Indent the list items */
+  padding-left: 0; /* Ensure there's no extra padding */
+}
+
+/* Style for individual list items */
+.blog-content ul li {
+  margin-bottom: 10px; /* Add space between list items */
+  font-size: 16px; /* Set font size for list items */
+  line-height: 1.6; /* Improve readability */
+  
+  list-style-type: disc !important;
+}
+
+.blog-content img  {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.blog-content a{
+  font-size: 16px;
+  cursor: pointer;
+  color:#182266 !important;
+  text-decoration: underline !important;
+}

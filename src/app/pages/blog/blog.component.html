@@ -1,0 +1,78 @@
+
+@if(this.loader){
+    <div class="container1">
+      <div class="loader"></div>
+    </div>
+  }
+  @else {
+    <app-header></app-header>
+
+<section class="breadcum">
+    <div class="container">
+        <div class="breadcum-content">
+            <h2 class="title">Blog</h2>           
+        </div>
+    </div>
+    </section>    
+    <section class="our-blog">
+      <div class="container">
+        <!-- Blog Cards -->
+        <div class="blog-cards v1">
+          <div class="row align-items-center">
+            <div class="col-lg-12 col-xl-12">
+              <!-- Display each blog item for the current page -->
+              <div *ngFor="let item of paginatedData" data-aos="fade-left" data-aos-duration="1500">
+                <div class="card-content-2">
+                  <div class="card-img-2">
+                    <img [src]="baseurl + '/' + item.image" alt="Blog Image" />
+                  </div>
+                  <div class="content-data">
+                    <h3 class="big-title">
+                      <a>{{ item.title }}</a>
+                    </h3>
+                    <div class="para" [innerHTML]="item.description | slice: 0:150"></div>
+                    <a (click)="view(item)" id="a1">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Pagination Controls -->
+        <!-- Pagination Controls -->
+    <div class="pagination-controls text-center mt-4">
+      <!-- Previous Button -->
+      <button
+        class="btn btn-sm arrow"
+        [disabled]="currentPage === 1"
+        (click)="goToPage(currentPage - 1)"
+      >
+        ← Previous
+      </button>
+
+      <!-- Page Numbers -->
+      <button
+        *ngFor="let page of totalPages"
+        class="btn btn-sm"
+        [class.active]="page === currentPage"
+        (click)="goToPage(page)"
+      >
+        {{ page }}
+      </button>
+
+      <!-- Next Button -->
+      <button
+        class="btn btn-sm arrow"
+        [disabled]="currentPage === totalPages.length"
+        (click)="goToPage(currentPage + 1)"
+      >
+        Next →
+      </button>
+    </div>
+
+      </div>
+    </section>
+    <div class="" style="height: 50px;;"></div>
+    <app-footer></app-footer>
+}

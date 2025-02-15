@@ -1,0 +1,26 @@
+h4{
+    font-size: 16px !important;
+    font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:"Montserrat";
+  color:#fff;
+  text-transform: none;
+  
+}
+footer{
+  margin-top: -50px !important;
+}
+ a:hover{
+  color:#fff !important;
+}
+@media (max-width: 768px) {
+footer{
+  margin-top: -50px !important;
+}
+}
